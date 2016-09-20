@@ -3,7 +3,7 @@ FROM python:2
 WORKDIR /opt/app
 
 RUN git clone https://git.openstack.org/openstack-infra/lodgeit . && \
-    pip install -r requirements.txt
+    pip install -r requirements.txt psycopg2
 
 COPY wsgi.py /opt/app/
 EXPOSE 5000
